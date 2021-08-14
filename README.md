@@ -1,2 +1,2 @@
-Yalantis School
+Yalantis Node.js School
 Test task

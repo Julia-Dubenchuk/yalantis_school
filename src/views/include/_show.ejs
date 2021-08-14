@@ -1,0 +1,9 @@
+<% for(var i = 0; i < users.length; i++) { %>
+<tr>
+  <td><%= i + 1 %></td>
+  <td><%= users[i].firstName %></td>
+  <td><%= users[i].lastName %></td>
+  <td><%= users[i].email %></td>
+  <td><img src="/uploads/<%= users[i]._id %>/photo.jpg" /></td>
+</tr>
+<% } %>
