@@ -1,9 +1,14 @@
 <% for(var i = 0; i < users.length; i++) { %>
 <tr>
   <td><%= i + 1 %></td>
-  <td><%= users[i].firstName %></td>
+  <td><a href="/<%= users[i]._id %>"><%= users[i].firstName %></a></td>
   <td><%= users[i].lastName %></td>
   <td><%= users[i].email %></td>
-  <td><img src="/uploads/<%= users[i]._id %>/photo.jpg" /></td>
+  <td>
+    <img
+      src="/uploads/<%= users[i]._id %>/photo.jpg"
+      alt="<%= users[i].firstName %> <%= users[i].lastName %>"
+    />
+  </td>
 </tr>
 <% } %>

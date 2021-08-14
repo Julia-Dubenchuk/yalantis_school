@@ -55,7 +55,7 @@ export const create = async (req: any, res: Response): Promise<void> => {
     });
 };
 
-// retrieve and return all users/ retrive and return a single user
+// retrieve and return all users / retrive and return a single user
 export const find = (req: Request, res: Response) => {
   if (req.query.id) {
     const id = req.query.id;

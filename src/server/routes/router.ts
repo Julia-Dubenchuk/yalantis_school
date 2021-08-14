@@ -2,7 +2,7 @@ import express from 'express';
 import multer from 'multer';
 import path from 'path';
 import sharp from 'sharp';
-import { homeRoutes, add_user } from '../services/render';
+import { homeRoutes, add_user, get_user } from '../services/render';
 import { create, find } from '../controller/controller';
 
 const route = express.Router();
@@ -41,6 +41,12 @@ route.get('/', homeRoutes);
  *  @method GET /add-user
  */
 route.get('/add-user', add_user);
+
+/**
+ *  @description add users
+ *  @method GET /user
+ */
+route.get('/:id', get_user);
 
 /**
  *  @description create user
